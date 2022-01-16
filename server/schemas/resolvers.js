@@ -1,5 +1,5 @@
 const { Profile } = require('../models');
-
+//minor update to check if I can push to team repo
 const resolvers = {
   Query: {
     profiles: async () => {
