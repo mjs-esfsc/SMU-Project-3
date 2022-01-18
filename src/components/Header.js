@@ -6,7 +6,7 @@ import Navigation from './Navigation';
 import Resume from './pages/Resume';
 import About from './pages/About';
 import Portfolio from './pages/Portfolio';
-import Contact from './pages/Contact';
+import Login from './pages/Login';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('About');
@@ -22,14 +22,14 @@ export default function PortfolioContainer() {
     if (currentPage === 'Portfolio') {
       return <Portfolio />;
     }
-    return <Contact />;
+    return <Login />;
   };
 
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
     <div className='bigHeader'>
-      <h1>Alexander's React Portfolio</h1>
+      <h1>Two men and a horse moving company</h1>
       {/* We are passing the currentPage from state and the function to update it */}
       <Navigation currentPage={currentPage} handlePageChange={handlePageChange} />
       {/* Here we are calling the renderPage method which will return a component  */}
