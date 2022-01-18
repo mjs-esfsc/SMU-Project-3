@@ -55,8 +55,8 @@ function Form() {
 
   return (
     <div>
-      <p>Phone: 214-293-9250</p>
-      <p>Email: umnovjp@yahoo.com</p>
+      <p>Our horses work harder than competitor's horses</p>
+      <p>Remember only positive reviews here</p>
       <form className="form">
         <input
           value={email}
