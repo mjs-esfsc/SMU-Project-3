@@ -1,6 +1,6 @@
-// ApolloClient: library for JS that enables you to manage data with GraphQL
-// InMemoryCache: Data store for Apollo Client
-// ApolloProvider:  Wraps your React app and places Apollo Client on the context, which enables you to access it from anywhere in your component tree
+// ApolloClient:library for JS that enables you to manage data with GraphQL
+// InMemoryCache:Data store for Apollo Client
+// ApolloProvider: Wraps your React app and places Apollo Client on the context, which enables you to access it from anywhere in your component tree
 import {
   ApolloClient,
   InMemoryCache,
