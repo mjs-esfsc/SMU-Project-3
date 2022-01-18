@@ -1,8 +1,8 @@
-// martin push test
 const express = require("express");
 const { ApolloServer } = require("apollo-server-express");
 const path = require("path");
-
+// MB: calling authMiddleware to verify authenticity
+const { authMiddleware } = require("./utils/auth");
 const { typeDefs, resolvers } = require("./schemas");
 const db = require("./config/connection");
 
@@ -12,6 +12,8 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  // MB: Add context to our server so data from the `authMiddleware()` function can pass data to the resolver functions that need it
+  context: authMiddleware,
 });
 
 server.applyMiddleware({ app });
