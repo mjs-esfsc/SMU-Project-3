@@ -9,14 +9,14 @@ import Portfolio from './pages/Portfolio';
 import Login from './pages/Login';
 
 export default function PortfolioContainer() {
-  const [currentPage, setCurrentPage] = useState('About');
+  const [currentPage, setCurrentPage] = useState('Signup');
 
   // This method is checking to see what the value of `currentPage` is. Depending on the value of currentPage, we return the corresponding component to render.
   const renderPage = () => {
     if (currentPage === 'Resume') {
       return <Resume />;
     }
-    if (currentPage === 'About') {
+    if (currentPage === 'Signup') {
       return <Signup />;
     }
     if (currentPage === 'Portfolio') {
