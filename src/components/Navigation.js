@@ -18,11 +18,11 @@ function Navigation({ currentPage, handlePageChange }) {
         <button className="nav-item">
           <a
             href="#about"
-            onClick={() => handlePageChange('About')}
+            onClick={() => handlePageChange('Signup')}
             // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
             className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
           >
-            About
+            Signup
           </a>
         </button>
         <button className="nav-item">
@@ -42,7 +42,7 @@ function Navigation({ currentPage, handlePageChange }) {
             // Check to see if the currentPage is `Contact`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
             className={currentPage === 'Login' ? 'nav-link active' : 'nav-link'}
           >
-            Login-signup
+            Login
           </a>
         </button>
       </span>

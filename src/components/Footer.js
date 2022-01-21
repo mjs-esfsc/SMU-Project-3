@@ -8,7 +8,7 @@ function Footer() {
   return (
     <footer className="footer">
       <a href="https://www.github.com/umnovjp"><img src={GitHubCat} alt="GitHub Logo" width="38.5" height="38.5" className = 'center'/></a>
-      <a href="https://www.linkedin.com/in/alexanderumnov/"><img src={LinkedInLogo} alt="GitHub Logo" width="38.5" height="38.5" className = 'center' /></a>
+      <p>martin's home address here protected by copyright</p>
     </footer>
   );
 }
