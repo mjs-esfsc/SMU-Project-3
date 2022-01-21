@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import './styles/Header.css';
 import Navigation from './Navigation';
 import Resume from './pages/Resume';
-import About from './pages/About';
+import Signup from './pages/Signup';
 import Portfolio from './pages/Portfolio';
 import Login from './pages/Login';
 
@@ -17,7 +17,7 @@ export default function PortfolioContainer() {
       return <Resume />;
     }
     if (currentPage === 'About') {
-      return <About />;
+      return <Signup />;
     }
     if (currentPage === 'Portfolio') {
       return <Portfolio />;

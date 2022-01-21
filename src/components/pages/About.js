@@ -3,7 +3,7 @@ import React from 'react';
 export default function About() {
   return (
     <div>
-      <h1>About Page</h1>
+      <h1>Signup</h1>
       <p>
       Professional experience covering HTML, JavaScript, mySQL and noSQL databases, running server-based web apps with technologies like node.js, express.js, react.js, web API. Expertise developing apps using React and MERN.
       </p>
