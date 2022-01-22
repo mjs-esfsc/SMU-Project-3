@@ -1,17 +1,17 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Product } = require('../models');
 
 // Open/create the db connection
 db.once('open', async () => {
-    await Category.deleteMany();
+    // await Category.deleteMany();
 // set up your categories
-    const categories = await Category.insertMany([
-        { name: 'Services' },
-        { name: 'Supplies' },
-        { name: 'Trucks' }
-    ]);
+    // const categories = await Category.insertMany([
+    //     { name: 'Services' },
+    //     { name: 'Supplies' },
+    //     { name: 'Trucks' }
+    // ]);
     
-    console.log('categories seeded');
+    // console.log('categories seeded');
 
     await Product.deleteMany();
 //assign Services, Supplies, and Trucks offered by quantity
@@ -21,7 +21,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'horse-and-wagon.jpg',
-            category: categories[2]._id,
+            // category: categories[2]._id,
             price: 25.00,
             quantity: 4
         },
@@ -30,7 +30,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'pickup.png',
-            category: categories[2]._id,
+            // category: categories[2]._id,
             price: 25.00,
             quantity: 5
         },
@@ -39,7 +39,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: '10Large.png',
-            category: categories[2]._id,
+            // category: categories[2]._id,
             price: 25.00,
             quantity: 5
         },
@@ -48,7 +48,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: '14Large.png',
-            category: categories[2]._id,
+            // category: categories[2]._id,
             price: 25.00,
             quantity: 5
         },
@@ -57,7 +57,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: '20Large.png',
-            category: categories[2]._id,
+            // category: categories[2]._id,
             price: 25.00,
             quantity: 5
         },
@@ -66,7 +66,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[0]._id,
+            // category: categories[0]._id,
             price: 25.00,
             quantity: 5
         },
@@ -75,7 +75,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[0]._id,
+            // category: categories[0]._id,
             price: 25.00,
             quantity: 5
         },
@@ -84,7 +84,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[0]._id,
+            // category: categories[0]._id,
             price: 25.00,
             quantity: 5
         },
@@ -93,7 +93,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[1]._id,
+            // category: categories[1]._id,
             price: 25.00,
             quantity: 500
         },
@@ -102,7 +102,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[1]._id,
+            // category: categories[1]._id,
             price: 25.00,
             quantity: 500
         },
@@ -111,7 +111,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[1]._id,
+            // category: categories[1]._id,
             price: 25.00,
             quantity: 500
         },
@@ -120,7 +120,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[1]._id,
+            // category: categories[1]._id,
             price: 25.00,
             quantity: 500
         },
@@ -129,7 +129,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[1]._id,
+            // category: categories[1]._id,
             price: 25.00,
             quantity: 5
         },
@@ -138,7 +138,7 @@ db.once('open', async () => {
             description: 
                 'Some information about the product',
             image: 'This is a Placeholder',
-            category: categories[1]._id,
+            // category: categories[1]._id,
             price: 25.00,
             quantity: 500
         }
