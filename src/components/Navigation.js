@@ -17,10 +17,10 @@ function Navigation({ currentPage, handlePageChange }) {
         </button>
         <button className="nav-item">
           <a
-            href="#about"
+            href="#signup"
             onClick={() => handlePageChange('Signup')}
-            // Check to see if the currentPage is `About`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
-            className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
+            // Check to see if the currentPage is `Signup`, and if so we use the active link class from bootstrap. Otherwise, we set it to a normal nav-link
+            className={currentPage === 'SignUp' ? 'nav-link active' : 'nav-link'}
           >
             Signup
           </a>
