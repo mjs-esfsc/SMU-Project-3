@@ -1,4 +1,5 @@
 import React from 'react';
+import handlePageChange from './Header';
 
 // We declare an object called styles that will contain a few objects for card and heading styles
 // Notice that each key lists CSS styles in camel case. Changing these styles will change styles in portfolio page
@@ -39,11 +40,12 @@ function Project({project}) {
         {description}
         
       </div>
+      {/* {gitLink} */}
+      {/* <a href="#cart" ><button className='toCart' >Add to cart</button></a> */}
       {gitLink}
       <br />
       {imageData}
-      {/* <a href="https://github.com/umnovjp/everNegativeBudget/"><img src={imageData} alt="Budget Tracker Screenshot" width="350" /></a>
-    <a href='https://nameless-brushlands-27009.herokuapp.com/'><p>Link to Heroku page</p></a>  */}
+      {/* <a href="https://github.com/umnovjp/everNegativeBudget/"><img src={imageData} alt="Budget Tracker Screenshot" width="350" /></a> */}
 
     </div>
       

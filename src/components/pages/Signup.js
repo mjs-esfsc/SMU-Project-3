@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from './Form3';
+import Form from './FormSignup';
 
 export default function Contact() {
   return (
