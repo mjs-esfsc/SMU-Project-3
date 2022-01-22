@@ -2,9 +2,8 @@ const { Schema, model } = require('mongoose', 'Product');
 
 const orderSchema = new Schema({
     purchaseDate: {
-        type: String,
-        required: true,
-        trim: true,
+        type: Date,
+        default: Date.now
       },
     products:[
         Product.Schema
