@@ -20,46 +20,46 @@ db.once('open', async () => {
             name: 'Horse and Wagon',
             description: 
                 'Some information about the product',
-            image: 'This is a Placeholder',
+            image: 'horse-and-wagon.jpg',
             category: categories[2]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 4
         },
         {
             name: 'Pickup Truck',
             description: 
                 'Some information about the product',
-            image: 'This is a Placeholder',
+            image: 'pickup.png',
             category: categories[2]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: '10ft Truck',
             description: 
                 'Some information about the product',
-            image: 'This is a Placeholder',
+            image: '10Large.png',
             category: categories[2]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: '15ft Truck',
             description: 
                 'Some information about the product',
-            image: 'This is a Placeholder',
+            image: '14Large.png',
             category: categories[2]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: '20ft Truck',
             description: 
                 'Some information about the product',
-            image: 'This is a Placeholder',
+            image: '20Large.png',
             category: categories[2]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: 'Full Moving Crew',
@@ -68,7 +68,7 @@ db.once('open', async () => {
             image: 'This is a Placeholder',
             category: categories[0]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: '1 Person Crew',
@@ -77,7 +77,7 @@ db.once('open', async () => {
             image: 'This is a Placeholder',
             category: categories[0]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: '2 Person Crew',
@@ -86,7 +86,7 @@ db.once('open', async () => {
             image: 'This is a Placeholder',
             category: categories[0]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: 'Bubble Wrap',
@@ -131,7 +131,7 @@ db.once('open', async () => {
             image: 'This is a Placeholder',
             category: categories[1]._id,
             price: 25.00,
-            quantity: 500
+            quantity: 5
         },
         {
             name: 'Padded Blankets',
