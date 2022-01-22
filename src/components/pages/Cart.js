@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Resume() {
+export default function Cart() {
   return (
     <div className='header'>
-      <h1>Resume</h1>
+      <h1>Cart</h1>
       <h2>Front-end Profciencies</h2>
       <ul>
         <li>HTML</li>
@@ -20,7 +20,7 @@ export default function Resume() {
         <li>NoSQL</li>
       </ul>
      
-<h2>Download My Resume</h2>
+<h2>Download My Cart</h2>
         <a href="https://umnovjp.github.io/updatedPortfolio/assets/Alexander_Github.pdf"><span class = 'book'>🕮</span></a>
         <br></br>
         <br></br>
