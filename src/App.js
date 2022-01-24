@@ -1,5 +1,7 @@
 import React from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
+import './components/styles/Header.css'
+
 // import Navbar from './components/Navbar';
 import Header from './components/Header';
 //import Card from './components/Card';
