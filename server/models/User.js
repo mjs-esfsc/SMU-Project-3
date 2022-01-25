@@ -1,4 +1,5 @@
-const { Schema, model } = require('mongoose', 'Order');
+const { Schema, model } = require('mongoose');
+const Order = require('./Order');
 
 const userSchema = new Schema({
   firstName: {
@@ -23,7 +24,7 @@ const userSchema = new Schema({
     trim: true,
   },
   orders: [
-    Order.Schema
+    Order
   ],
 
   address:{
@@ -39,6 +40,6 @@ const userSchema = new Schema({
 
 });
 
-const User = model('User', userSchema);
+//const User = model('User', userSchema);
 
-module.exports = User;
+module.exports = userSchema;
