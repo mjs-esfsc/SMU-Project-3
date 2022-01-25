@@ -1,10 +1,11 @@
 import React from 'react';
+import { Button } from 'antd'
 
 
 function Navigation({ currentPage, handlePageChange }) {
     return (
       <span className="">
-        <button className="">
+        <Button>
           <a
             href="#cart"
             onClick={() => handlePageChange('Cart')}
@@ -14,7 +15,7 @@ function Navigation({ currentPage, handlePageChange }) {
           >
             Cart
           </a>
-        </button>
+        </Button>
         <button className="">
           <a
             href="#signup"

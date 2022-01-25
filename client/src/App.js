@@ -10,6 +10,7 @@ import {
 // setContext: tool to authenticate requests sent to backend when user logged-in
 import { setContext } from "@apollo/client/link/context";
 import React from "react";
+import 'antd/dist/antd.css';
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import logo from "./logo.svg";
