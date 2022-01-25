@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import './components/styles/Header.css'
+import { Layout } from 'antd';
 
 // import Navbar from './components/Navbar';
 import Header from './components/Header';
@@ -15,16 +16,17 @@ const client = new ApolloClient ({
 // I can place <Navbar /> and  <Card /> inside that <div> in return below but they are deleted for npw
 function App() {
   return (
-
-    <ApolloProvider client = {client}>
-      <>
-    <div>
+    <Layout style={{background: '#096dd9'}}>
+      <ApolloProvider client = {client}>
+        <>
+      <div>
       <Header /> 
-      
-    </div>
-    <Footer />
-    </>
-    </ApolloProvider>
+        
+      </div>
+      <Footer />
+      </>
+      </ApolloProvider>
+    </Layout>
   );
 }
 
