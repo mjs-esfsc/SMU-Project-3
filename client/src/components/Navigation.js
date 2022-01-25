@@ -1,10 +1,15 @@
 import React from 'react';
+
+import { Button } from 'antd'
+
+=======
 // navigation switches between tabs in header
+
 
 function Navigation({ currentPage, handlePageChange }) {
     return (
-      <span className="nav-tabs">
-        <button className="nav-item">
+      <span className="">
+        <Button>
           <a
             href="#cart"
             onClick={() => handlePageChange('Cart')}
@@ -14,8 +19,8 @@ function Navigation({ currentPage, handlePageChange }) {
           >
             Cart
           </a>
-        </button>
-        <button className="nav-item">
+        </Button>
+        <button className="">
           <a
             href="#signup"
             onClick={() => handlePageChange('Signup')}
@@ -25,7 +30,7 @@ function Navigation({ currentPage, handlePageChange }) {
             Signup
           </a>
         </button>
-        <button className="nav-item">
+        <button className="">
           <a
             href="#portfolio"
             onClick={() => handlePageChange('Portfolio')}
@@ -35,7 +40,7 @@ function Navigation({ currentPage, handlePageChange }) {
             Our Fleet
           </a>
         </button>
-        <button className="nav-item">
+        <button className="">
           <a
             href="#login"
             onClick={() => handlePageChange('Login')}
