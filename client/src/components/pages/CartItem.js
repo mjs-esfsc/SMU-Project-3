@@ -1,0 +1,1 @@
+// something to be added to get every item inside the cart

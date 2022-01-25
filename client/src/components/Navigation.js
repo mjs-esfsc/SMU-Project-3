@@ -1,5 +1,5 @@
 import React from 'react';
-
+// navigation switches between tabs in header
 
 function Navigation({ currentPage, handlePageChange }) {
     return (
