@@ -21,6 +21,9 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// So that is setting up a piece of middleware. Which is serving up everything in the "/images" folder to the browser as a static asset.
+app.use("/images", express.static(path.join(__dirname, "../client/images")));
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
