@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
-//import { Link } from 'react-router-dom';
-import { useMutation } from '@apollo/client';
-import Auth from '../utils/auth';
-import { ADD_USER } from '../utils/mutations';
+// Signup is a page with its own url
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import Auth from "../utils/auth";
+import { ADD_USER } from "../utils/mutations";
 
 function Signup(props) {
-  const [formState, setFormState] = useState({ email: '', password: '' });
+  const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
 
+  // MB: ADDED address AND phone to function
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     const mutationResponse = await addUser({
@@ -16,6 +18,8 @@ function Signup(props) {
         password: formState.password,
         firstName: formState.firstName,
         lastName: formState.lastName,
+        address: formState.address,
+        phone: formState.phone,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -29,10 +33,10 @@ function Signup(props) {
       [name]: value,
     });
   };
-// on line 35 deleted <Link to="/login">← Go to Login</Link>
+  // on line 35 deleted <Link to="/login">← Go to Login</Link>
   return (
     <div className="container my-1">
-      
+      <Link to="/login">← Go to Login</Link>
 
       <h2>Signup</h2>
       <form onSubmit={handleFormSubmit}>
@@ -56,6 +60,29 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
+
+        <div className="flex-row space-between my-2">
+          <label htmlFor="address">Address:</label>
+          <input
+            placeholder="Address"
+            name="address"
+            type="address"
+            id="address"
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="flex-row space-between my-2">
+          <label htmlFor="phone">Phone:</label>
+          <input
+            placeholder="Phone"
+            name="phone"
+            type="number"
+            id="phone"
+            onChange={handleChange}
+          />
+        </div>
+
         <div className="flex-row space-between my-2">
           <label htmlFor="email">Email:</label>
           <input

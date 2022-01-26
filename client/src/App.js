@@ -1,3 +1,4 @@
+// MB ON 01/25/22: ADDED BROWSER ROUTER AND GLOBAL STATE. ALSO USING SWITCH FOR HOME (PRODUCTIONLIST AND CART), LOGIN AND SIGNUP.
 // ApolloClient:library for JS that enables you to manage data with GraphQL
 // InMemoryCache:Data store for Apollo Client
 // ApolloProvider: Wraps your React app and places Apollo Client on the context, which enables you to access it from anywhere in your component tree
@@ -10,11 +11,19 @@ import {
 // setContext: tool to authenticate requests sent to backend when user logged-in
 import { setContext } from "@apollo/client/link/context";
 import React from "react";
-import 'antd/dist/antd.css';
+import "antd/dist/antd.css";
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
+
+// pages and components imported
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import Nav from "./components/Nav";
+import Footer from "./components/Footer";
+import { StoreProvider } from "./utils/GlobalState";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -44,22 +53,34 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <div className="App">
-          <header className="App-header">
+        <div>
+          <StoreProvider>
+            <Nav />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+            </Switch>
+            <Footer />
+          </StoreProvider>
+        </div>
+        {/* THIS IS THE PRESET LAYOUT WHEN CREATING A REACT APP..DONT USE */}
+        {/* <div className="App"> */}
+        {/* <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
             <p>
               Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
+            </p> */}
+        {/* <a
               className="App-link"
               href="https://reactjs.org"
               target="_blank"
               rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
-        </div>
+            > */}
+        {/* Learn React
+            </a> */}
+        {/* </header>
+        </div> */}
       </Router>
     </ApolloProvider>
   );

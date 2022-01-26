@@ -36,6 +36,19 @@ export const QUERY_ALL_PRODUCTS = gql`
   }
 `;
 
+export const QUERY_PRODUCTS = gql`
+  query getProducts($name: String) {
+    products(name: $name) {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+    }
+  }
+`;
+
 // QUERY_CHECKOUT sets up checkout by grabbing the ID of products
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
