@@ -1,5 +1,5 @@
-const { Schema, model } = require('mongoose');
-const Order = require('./Order');
+const { Schema, model } = require("mongoose");
+const Order = require("./Order");
 
 const userSchema = new Schema({
   firstName: {
@@ -23,23 +23,19 @@ const userSchema = new Schema({
     required: true,
     trim: true,
   },
-  orders: [
-    Order
-  ],
-
-  address:{
+  orders: [Order.schema],
+  address: {
     type: String,
     required: true,
     trim: true,
   },
-  phone:{
+  phone: {
     type: String,
     required: true,
     trim: true,
-  }
-
+  },
 });
 
-//const User = model('User', userSchema);
+const User = model("User", userSchema);
 
-module.exports = userSchema;
+module.exports = User;

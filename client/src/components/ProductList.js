@@ -11,8 +11,9 @@ import { idbPromise } from "../utils/helpers";
 function ProductList() {
   const [state, dispatch] = useStoreContext();
   const { loading, data } = useQuery(QUERY_PRODUCTS);
-
+  console.log("STATE?", state);
   useEffect(() => {
+    console.log("DATA?", data);
     if (data) {
       dispatch({
         type: UPDATE_PRODUCTS,
@@ -33,6 +34,7 @@ function ProductList() {
 
   const products = data?.products || [];
 
+  console.log("PRODUCTS?", products);
   return (
     <div className="my-2">
       <h2>Products and Fleet:</h2>

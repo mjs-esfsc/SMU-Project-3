@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const db = require("./connection");
 const { User, Product } = require("../models");
 
@@ -13,7 +15,7 @@ db.once("open", async () => {
 
   // console.log('categories seeded');
 
-  await Product.deleteMany();
+  await Product.deleteMany({});
   //assign Services, Supplies, and Trucks offered by quantity
   const products = await Product.insertMany([
     {
@@ -151,7 +153,7 @@ db.once("open", async () => {
   await User.create({
     firstName: "Allen",
     lastName: "Cheslik",
-    email: "acheslik@testmail.com",
+    email: "acheslik2@testmail.com",
     password: "password12345",
     address: "5208 Jessica St",
     phone: "915-584-0816",
