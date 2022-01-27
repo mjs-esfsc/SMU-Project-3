@@ -1,9 +1,11 @@
 // MB: THIS IS THE NAV BAR. IF USER NOT LOGGED IN, BAR WILL DISPLAY SIGN-UP AND LOGIN. IF USER IS LOGGED IN, BAR WILL DISPLAY LOGOUT
 
 import React from "react";
-import { Button } from "antd";
+import { Layout, Button, Row, Col } from 'antd';
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
+
+const { Header } = Layout;
 
 // =======
 // navigation switches between tabs in header
@@ -22,26 +24,26 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
-          </li>
-        </ul>
+        <div>
+          <Button  type="primary"><Link to="/signup">Signup</Link></Button>
+          {' '}
+          <Button type="#096dd9"><Link to="/login">Login</Link></Button>
+        </div>
       );
     }
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">MOVING-EXPRESS</Link>
-      </h1>
-
-      <nav>{showNavigation()}</nav>
-    </header>
+    <Layout>
+    <Header className="header">
+      <Row>
+        <Col span={12}>
+          <h1><Link to="/">MOVING-EXPRESS</Link></h1>
+        </Col>
+        <Col span={12}><nav style={{ float: "right" }}>{showNavigation()}</nav></Col>
+      </Row>
+    </Header>
+    </Layout>
   );
 }
 

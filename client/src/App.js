@@ -12,11 +12,11 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import "antd/dist/antd.css";
+
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import logo from "./logo.svg";
 import "./App.css";
-
 // pages and components imported
 import Home from "./pages/Home";
 import Login from "./pages/Login";
