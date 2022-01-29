@@ -19,6 +19,7 @@
   "dependencies": {
     "@stripe/stripe-js": "^1.22.0",
     "antd": "^4.18.5",
-    "bcrypt": "^5.0.1"
+    "bcrypt": "^5.0.1",
+    "emailjs-com": "^3.2.0"
   }
 }

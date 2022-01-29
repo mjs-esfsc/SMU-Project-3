@@ -4,6 +4,7 @@ import React from "react";
 import { Button } from "antd";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
+import Contact from "../pages/Contact";
 
 // =======
 // navigation switches between tabs in header
@@ -18,6 +19,9 @@ function Nav() {
               Logout
             </a>
           </li>
+          <li className="mx-1">
+            <Link to="/contact">Contact Us</Link>
+          </li>
         </ul>
       );
     } else {
@@ -29,6 +33,9 @@ function Nav() {
           <li className="mx-1">
             <Link to="/login">Login</Link>
           </li>
+          <li className="mx-1">
+            <Link to="/contact">Contact Us</Link>
+          </li>
         </ul>
       );
     }
@@ -39,7 +46,6 @@ function Nav() {
       <h1>
         <Link to="/">MOVING-EXPRESS</Link>
       </h1>
-
       <nav>{showNavigation()}</nav>
     </header>
   );
