@@ -21,6 +21,35 @@ server.applyMiddleware({ app });
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
+// // Create/activate payment flow
+// const domain = 'http://localhost:3002';
+
+// app. post('/create-checkout-session', async (req, res) => {
+//   const session = await.stripe.checkout.session.create({
+//     customer_email: 'customer@example.com',
+//     submit_type: 'donate',
+//     billing_address_collection: 'auto',
+//     shipping_address_collection: {
+//       allowed_countries: ['US'],
+//     },
+//     line_items: [
+//       {
+//         price: '{{Price_ID}}', // TO DO, Insert the exact price id (for example, pr1234) of the product we are selling //
+//         quantity: 1, 
+//       },
+//     ],
+//     //fulfillment status
+//     mode: 'payment', 
+//     success_url: `${domain}/?success=true`,
+//     cancel_url: `${domain}/?canceled=true`,
+//     automatic_tax: {enabled: true},
+//   });
+
+//   res.redirect(303, session.url);
+// });
+
+// app.listen(3002, () => console.log('Running on Port 3002'));
+
 // So that is setting up a piece of middleware. Which is serving up everything in the "/images" folder to the browser as a static asset.
 app.use("/images", express.static(path.join(__dirname, "../client/images")));
 
