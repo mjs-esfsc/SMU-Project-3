@@ -5,8 +5,6 @@ import { Layout, Button, Row, Col } from 'antd';
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 
-const { Header } = Layout;
-
 // =======
 // navigation switches between tabs in header
 
@@ -27,23 +25,19 @@ function Nav() {
         <div>
           <Button  type="primary"><Link to="/signup">Signup</Link></Button>
           {' '}
-          <Button type="#096dd9"><Link to="/login">Login</Link></Button>
+          <Button type="primary"><Link to="/login">Login</Link></Button>
         </div>
       );
     }
   }
 
   return (
-    <Layout>
-    <Header className="header">
-      <Row>
+      <Row style={{background: '#f5222d'}}>
         <Col span={12}>
-          <h1><Link to="/">MOVING-EXPRESS</Link></h1>
+          <h1><Link style={{color: 'white'}} to="/">MOVING-EXPRESS</Link></h1>
         </Col>
         <Col span={12}><nav style={{ float: "right" }}>{showNavigation()}</nav></Col>
       </Row>
-    </Header>
-    </Layout>
   );
 }
 

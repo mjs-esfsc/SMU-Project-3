@@ -12,6 +12,7 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import "antd/dist/antd.css";
+import { Layout, Button, Row, Col } from 'antd';
 
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -24,6 +25,9 @@ import Signup from "./pages/Signup";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { StoreProvider } from "./utils/GlobalState";
+
+const { Header, Sider, Content } = Layout;
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -54,6 +58,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+          <Layout>
           <StoreProvider>
             <Nav />
             <Switch>
@@ -63,6 +68,7 @@ function App() {
             </Switch>
             <Footer />
           </StoreProvider>
+          </Layout>
         </div>
         {/* THIS IS THE PRESET LAYOUT WHEN CREATING A REACT APP..DONT USE */}
         {/* <div className="App"> */}
