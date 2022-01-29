@@ -4,6 +4,9 @@ import React from "react";
 import { Layout, Button, Row, Col } from 'antd';
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
+//import { LinearGradient } from "expo-linear-gradient";
+import './styles/Header.css'
+
 
 // =======
 // navigation switches between tabs in header
@@ -32,7 +35,7 @@ function Nav() {
   }
 
   return (
-      <Row style={{background: '#f5222d'}}>
+      <Row className="gradient">
         <Col span={12}>
           <h1><Link style={{color: 'white'}} to="/">Two Men and a Horse Moving Company</Link></h1>
         </Col>
