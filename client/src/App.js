@@ -29,7 +29,6 @@ import Detail from "./pages/Detail";
 import { StoreProvider } from "./utils/GlobalState";
 
 const { Header, Sider, Content } = Layout;
-const TITLE = "Two Men and a Camel";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -63,9 +62,6 @@ function App() {
           <Layout>
             <StoreProvider>
               <Nav />
-              <Helmet>
-                <title>{TITLE}</title>
-              </Helmet>
               <div className="horseHeader">
                 <p
                   style={{

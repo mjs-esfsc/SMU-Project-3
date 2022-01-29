@@ -6,6 +6,7 @@ import { useMutation } from "@apollo/client";
 import { Link } from "react-router-dom";
 import { LOGIN } from "../utils/mutations";
 import Auth from "../utils/auth";
+import ReactDOM from 'react-dom';
 
 
 function Login(props) {
@@ -43,6 +44,7 @@ function Login(props) {
   
  
   return (
+    <div style={{  }}>
     <Form
       name="basic"
       labelCol={{
@@ -101,11 +103,12 @@ function Login(props) {
           span: 16,
         }}
       >
-        <Button type="primary" htmlType="submit">
+        <Button type="danger" htmlType="submit">
           Submit
         </Button>
       </Form.Item>
     </Form>
+    </div>
   );  
   //   <div className="container my-1">
   //     <Link to="/signup">← Go to Signup</Link>
