@@ -62,7 +62,7 @@ function App() {
           <StoreProvider>
             <Nav />
             <div className="horseHeader">
-            <p style={{ color: '#262626', textAlign: 'center', marginTop: '200px', fontSize: '30px', textShadow:'1px 1px' }}>
+            <p style={{ color: '#262626', textAlign: 'center', marginTop: '200px', fontSize: '30px', fontFamily: 'fantasy' }}>
               WE GOT HORSEPOWER.
             </p>
           </div>
