@@ -7,6 +7,12 @@ import { UPDATE_PRODUCTS } from "../utils/actions";
 import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
+// import { Content } from "antd/lib/layout/layout";
+import { Layout, Button, Row, Col } from 'antd';
+
+
+const { Header, Sider, Content } = Layout;
+
 
 function ProductList() {
   const [state, dispatch] = useStoreContext();
@@ -36,6 +42,7 @@ function ProductList() {
 
   console.log("PRODUCTS?", products);
   return (
+    <Content>
     <div className="my-2">
       <h2>Products and Fleet:</h2>
       {state.products.length ? (
@@ -57,6 +64,7 @@ function ProductList() {
       )}
       {loading ? <p>Loading ...</p> : null}
     </div>
+    </Content>
   );
 }
 
