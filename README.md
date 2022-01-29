@@ -1,6 +1,6 @@
 # Two Men and a Horse App
 
-This project is React page of a moving company. A user can browse products and services, add services to cart, make payments. To start this app for the first time, run `npm run seeds' then `npm run develop` in terminal. This page will open. ![image](https://user-images.githubusercontent.com/88174852/151672693-e3fe57ed-9308-41e6-a88e-0e302fbd6570.png)
+This project is React page of a moving company. A user can browse products and services, add services to cart, make payments. To start this app for the first time, run `npm run seeds` then `npm run develop` in terminal. This page will open. ![image](https://user-images.githubusercontent.com/88174852/151672693-e3fe57ed-9308-41e6-a88e-0e302fbd6570.png)
 
 
 ## Meeting Technical Requirements
