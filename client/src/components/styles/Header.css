@@ -11,6 +11,7 @@ header {
     -moz-background-size: 100% 150%;
     -o-background-size: 100% 150%;
     background-size: 100%;
+    height: 350px;
 }
 
 header h1 {

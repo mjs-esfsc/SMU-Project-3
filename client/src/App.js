@@ -61,6 +61,11 @@ function App() {
           <Layout>
           <StoreProvider>
             <Nav />
+            <div className="horseHeader">
+            <p style={{ color: '#262626', textAlign: 'center', marginTop: '200px', fontSize: '30px', textShadow:'1px 1px' }}>
+              WE GOT HORSEPOWER.
+            </p>
+          </div>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
@@ -70,23 +75,6 @@ function App() {
           </StoreProvider>
           </Layout>
         </div>
-        {/* THIS IS THE PRESET LAYOUT WHEN CREATING A REACT APP..DONT USE */}
-        {/* <div className="App"> */}
-        {/* <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p> */}
-        {/* <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            > */}
-        {/* Learn React
-            </a> */}
-        {/* </header>
-        </div> */}
       </Router>
     </ApolloProvider>
   );
