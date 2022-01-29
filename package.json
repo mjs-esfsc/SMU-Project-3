@@ -26,6 +26,7 @@
     "react-native-web": "^0.17.5",
     "react-router-dom": "^6.2.1",
     "react-router-native": "^6.2.1",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "stripe": "^8.201.0"
   }
 }
