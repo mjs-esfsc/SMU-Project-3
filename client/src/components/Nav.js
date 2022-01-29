@@ -23,9 +23,9 @@ function Nav() {
     } else {
       return (
         <div>
-          <Button  type="primary"><Link to="/signup">Signup</Link></Button>
+          <Button><Link to="/signup">Signup</Link></Button>
           {' '}
-          <Button type="primary"><Link to="/login">Login</Link></Button>
+          <Button><Link to="/login">Login</Link></Button>
         </div>
       );
     }
@@ -33,9 +33,7 @@ function Nav() {
 
   return (
       <Row style={{background: '#f5222d'}}>
-        <Col span={12}>
-          <h1><Link style={{color: 'white'}} to="/">Two Men and a Horse Moving Company</Link></h1>
-        </Col>
+        <Col span={12}><h1><Link style={{color: 'white'}} to="/">Two Men and a Horse Moving Company</Link></h1></Col>
         <Col span={12}><nav style={{ float: "right" }}>{showNavigation()}</nav></Col>
       </Row>
   );

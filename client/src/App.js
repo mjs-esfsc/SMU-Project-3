@@ -65,7 +65,12 @@ function App() {
             <p style={{ color: '#262626', textAlign: 'center', marginTop: '200px', fontSize: '30px', fontFamily: 'fantasy' }}>
               WE GOT HORSEPOWER.
             </p>
-          </div>
+            </div>
+            <Row style={{}}>
+              <Col span={8}><img src="" alt=""></img><h1>Moving Trucks</h1></Col>
+              <Col span={8}><img src="" alt=""></img><h1>Moving Supplies</h1></Col>
+              <Col span={8}><img src="" alt=""></img><h1>Moving Labor</h1></Col>
+            </Row>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />
