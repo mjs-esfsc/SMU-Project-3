@@ -21,6 +21,6 @@ to be added
 ## Contributors 
 ### Mark Sammis - overall project management
 ### Martin Bedoya - back end
-### Allen Cheslik - seeds, payment
+### Allen Cheslik - Database and Seeds, Stripe, Serviceworker Implementations
 ### Talhah Awan - styles, ant-components
 ### Alexander Umnov - front end
