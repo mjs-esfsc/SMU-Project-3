@@ -6,7 +6,7 @@ import "./styles/Header.css";
 function Footer() {
   return (
     <footer style={{ background: '#262626', color: 'white' }}>
-      <Row>
+      <Row className="gradient1">
         <Col span={12}>
           <h1 style={{ color: 'white', fontSize: '50px' }}>The Team:</h1>
           <ul style={{ fontSize: '20px' }}>
