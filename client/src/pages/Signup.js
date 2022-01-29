@@ -105,7 +105,7 @@ function Signup(props) {
           <Input.TextArea />
         </Form.Item>
         <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
-          <Button type="primary" htmlType="submit">
+          <Button type="danger" htmlType="submit">
             Submit
           </Button>
         </Form.Item>
