@@ -13,6 +13,8 @@ import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import "antd/dist/antd.css";
 import { Layout, Button, Row, Col } from 'antd';
+import { Helmet } from 'react-helmet';
+
 
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -27,7 +29,7 @@ import Footer from "./components/Footer";
 import { StoreProvider } from "./utils/GlobalState";
 
 const { Header, Sider, Content } = Layout;
-
+const TITLE = 'Two Men and a Camel';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -61,6 +63,9 @@ function App() {
           <Layout>
           <StoreProvider>
             <Nav />
+            <Helmet>
+          <title>{ TITLE }</title>
+        </Helmet>
             <div className="horseHeader">
             <p style={{ color: '#262626', textAlign: 'center', marginTop: '200px', fontSize: '40px', fontFamily: 'fantasy' }}>
               WE GOT HORSEPOWER.
