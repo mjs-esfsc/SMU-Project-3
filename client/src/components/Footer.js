@@ -4,7 +4,7 @@ import "./styles/Header.css";
 
 function Footer() {
   return (
-    <footer className="">
+    <footer style={{background: 'black', color: 'white'}}>
       <p>Copyright</p>
     </footer>
   );

@@ -5,6 +5,14 @@ header {
   height: 200px;
 } /*not used*/
 
+.horseHeader {
+  background: url("../assets/horsebanner.png") no-repeat center;
+    -webkit-background-size: 100% 150%;
+    -moz-background-size: 100% 150%;
+    -o-background-size: 100% 150%;
+    background-size: 100%;
+}
+
 header h1 {
   margin: 0;
   padding-top: 75px;

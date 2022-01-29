@@ -5,7 +5,7 @@ import Cart from "../components/Cart";
 
 const Home = () => {
   return (
-    <div className="">
+    <div className="horseHeader">
       <ProductList />
       <Cart />
     </div>

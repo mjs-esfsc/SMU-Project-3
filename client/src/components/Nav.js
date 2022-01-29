@@ -34,7 +34,7 @@ function Nav() {
   return (
       <Row style={{background: '#f5222d'}}>
         <Col span={12}>
-          <h1><Link style={{color: 'white'}} to="/">MOVING-EXPRESS</Link></h1>
+          <h1><Link style={{color: 'white'}} to="/">Two Men and a Horse Moving Company</Link></h1>
         </Col>
         <Col span={12}><nav style={{ float: "right" }}>{showNavigation()}</nav></Col>
       </Row>
