@@ -98,3 +98,7 @@ float:left}
 .listItem {width: 500px;}
 
 .toCart {font-size: 22px;}
+
+.gradient {
+  background:linear-gradient(rgba(250,0,0,0.5),transparent);
+  background-color: darkorange /*this your primary color*/}
