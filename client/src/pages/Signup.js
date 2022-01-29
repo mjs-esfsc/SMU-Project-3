@@ -86,8 +86,8 @@ function Signup(props) {
           <Input />
         </Form.Item>
         <Form.Item
-          name={['user', 'age']}
-          label="Age"
+          name={['user', 'phone']}
+          label="Phone"
           rules={[
             {
               type: 'number',
@@ -98,10 +98,10 @@ function Signup(props) {
         >
           <InputNumber />
         </Form.Item>
-        <Form.Item name={['user', 'website']} label="Website">
+        <Form.Item name={['user', 'address']} label="Address">
           <Input />
         </Form.Item>
-        <Form.Item name={['user', 'introduction']} label="Introduction">
+        <Form.Item name={['user', 'password']} label="Password">
           <Input.TextArea />
         </Form.Item>
         <Form.Item wrapperCol={{ ...layout.wrapperCol, offset: 8 }}>
