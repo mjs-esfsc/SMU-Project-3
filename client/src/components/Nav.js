@@ -1,9 +1,12 @@
 // MB: THIS IS THE NAV BAR. IF USER NOT LOGGED IN, BAR WILL DISPLAY SIGN-UP AND LOGIN. IF USER IS LOGGED IN, BAR WILL DISPLAY LOGOUT
 
 import React from "react";
-import { Button } from "antd";
+import { Layout, Button, Row, Col } from 'antd';
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
+//import { LinearGradient } from "expo-linear-gradient";
+import './styles/Header.css'
+
 
 // =======
 // navigation switches between tabs in header
@@ -22,26 +25,20 @@ function Nav() {
       );
     } else {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">Signup</Link>
-          </li>
-          <li className="mx-1">
-            <Link to="/login">Login</Link>
-          </li>
-        </ul>
+        <div>
+          <Button><Link to="/signup">Signup</Link></Button>
+          {' '}
+          <Button><Link to="/login">Login</Link></Button>
+        </div>
       );
     }
   }
 
   return (
-    <header className="flex-row px-1">
-      <h1>
-        <Link to="/">MOVING-EXPRESS</Link>
-      </h1>
-
-      <nav>{showNavigation()}</nav>
-    </header>
+      <Row className="gradient">
+        <Col span={12}><h1><Link style={{color: 'white'}} to="/">Two Men and a Horse Moving Company</Link></h1></Col>
+        <Col span={12}><nav style={{ float: "right" }}>{showNavigation()}</nav></Col>
+      </Row>
   );
 }
 
