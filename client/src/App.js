@@ -13,7 +13,7 @@ import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import "antd/dist/antd.css";
 import { Layout, Button, Row, Col } from 'antd';
-
+import { Helmet } from 'react-helmet';
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import logo from "./logo.svg";
@@ -61,6 +61,11 @@ function App() {
           <Layout>
           <StoreProvider>
             <Nav />
+            <Helmet>
+        <title>Two Men and a Camel</title>
+        <meta name="description" content="App Description" />
+        <meta name="theme-color" content="#008f68" />
+      </Helmet>
             <div className="horseHeader">
             <p style={{ color: '#262626', textAlign: 'center', marginTop: '200px', fontSize: '40px', fontFamily: 'fantasy' }}>
               WE GOT HORSEPOWER.
