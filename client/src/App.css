@@ -37,3 +37,15 @@
   }
 }
 
+.appImages {
+  height: 60%;
+  width: 80%;
+}
+
+.sloganBlocks {
+  flex: 1;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  flex-direction: column;
+}

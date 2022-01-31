@@ -1,12 +1,11 @@
 // MB: THIS IS THE NAV BAR. IF USER NOT LOGGED IN, BAR WILL DISPLAY SIGN-UP AND LOGIN. IF USER IS LOGGED IN, BAR WILL DISPLAY LOGOUT
 
 import React from "react";
-import { Layout, Button, Row, Col } from 'antd';
+import { Layout, Button, Row, Col } from "antd";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 //import { LinearGradient } from "expo-linear-gradient";
-import './styles/Header.css'
-
+import "./styles/Header.css";
 
 // =======
 // navigation switches between tabs in header
@@ -15,30 +14,43 @@ function Nav() {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
-          <li className="mx-1">
-            <a href="/" onClick={() => Auth.logout()}>
+        <div className="flex-row">
+          {/* <li className="mx-1"> */}
+          <Button>
+            <Link href="/" onClick={() => Auth.logout()}>
               Logout
-            </a>
-          </li>
-        </ul>
+            </Link>
+          </Button>
+          {/* </li> */}
+        </div>
       );
     } else {
       return (
         <div>
-          <Button><Link to="/signup">Signup</Link></Button>
-          {' '}
-          <Button><Link to="/login">Login</Link></Button>
+          <Button>
+            <Link to="/signup">Signup</Link>
+          </Button>{" "}
+          <Button>
+            <Link to="/login">Login</Link>
+          </Button>
         </div>
       );
     }
   }
 
   return (
-      <Row className="gradient">
-        <Col span={12}><h1><Link style={{color: 'white'}} to="/">Two Men and a Horse Moving Company</Link></h1></Col>
-        <Col span={12}><nav style={{ float: "right" }}>{showNavigation()}</nav></Col>
-      </Row>
+    <Row className="gradient">
+      <Col span={12}>
+        <h1 className="navTitle">
+          <Link style={{ color: "white" }} to="/">
+            Two Men and a Horse Moving Company
+          </Link>
+        </h1>
+      </Col>
+      <Col span={12}>
+        <nav>{showNavigation()}</nav>
+      </Col>
+    </Row>
   );
 }
 

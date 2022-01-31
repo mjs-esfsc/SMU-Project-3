@@ -1,15 +1,35 @@
 .productImage {
   height: 240px;
   width: 300px;
-  margin-left: 3%;
+  margin-left: 42%;
   margin-bottom: 5%;
 }
 
 h2 {
   font-size: 250%;
   margin-left: 3%;
+  margin-top: 2%;
+  text-align: center;
 }
 
 p {
   margin-left: 3%;
+}
+
+.detailPrice {
+  margin-left: 3%;
+  text-align: center;
+}
+
+.buttonDetail {
+  margin: inherit;
+}
+
+.desc {
+  text-align: center;
+}
+
+.backLink {
+  font-size: 160%;
+  font-weight: 500;
 }

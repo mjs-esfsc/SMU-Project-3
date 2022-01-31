@@ -72,7 +72,7 @@ function Login(props) {
             <p className="error-text">The provided credentials are incorrect</p>
           </div>
         ) : null}
-        <div className="flex-row flex-end">
+        <div className="signButton flex-row flex-end">
           <button type="submit">Submit</button>
         </div>
       </form>
