@@ -61,6 +61,7 @@ const resolvers = {
       const order = new Order({ products: args.products });
       const line_items = [];
 
+// Create your products
       const { products } = await order.populate("products").execPopulate();
 
       for (let i = 0; i < products.length; i++) {
@@ -69,22 +70,22 @@ const resolvers = {
           description: products[i].description,
           images: [`${url}/images/${products[i].image}`],
         });
-
+// Create your prices
         const price = await stripe.prices.create({
           product: product.id,
           unit_amount: products[i].price * 100,
           currency: "usd",
         });
-
+// Create array for each line item
         line_items.push({
           price: price.id,
           quantity: 1,
         });
       }
-
+//This creates our checkout session
       const session = await stripe.checkout.sessions.create({
-        payment_method_types: ["card"],
-        line_items,
+        payment_method_types: ['card'],
+        line_items, // Line items from above go into here
         mode: "payment",
         success_url: `${url}/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url}/`,
