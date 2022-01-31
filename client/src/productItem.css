@@ -1,0 +1,29 @@
+.imagesStyle {
+  height: 240px;
+  width: 300px;
+}
+
+.card {
+  width: 25%;
+  text-align: center;
+  margin-top: 5%;
+  /* margin-right: 1%; */
+}
+
+.card:hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-top: 0;
+}

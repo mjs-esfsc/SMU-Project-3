@@ -6,6 +6,8 @@ import { useStoreContext } from "../utils/GlobalState";
 import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 import { idbPromise } from "../utils/helpers";
 import { Button } from "antd";
+// importing css styling for productItem
+import "../productItem.css";
 
 function ProductItem(item) {
   const [state, dispatch] = useStoreContext();
@@ -38,15 +40,15 @@ function ProductItem(item) {
   return (
     <div className="card px-1 py-1">
       <Link to={`/products/${_id}`}>
-        <img alt={name} src={`/images/${image}`} />
+        <img className="imagesStyle" alt={name} src={`/images/${image}`} />
         <p>{name}</p>
       </Link>
       <div>
-        <p>{description}</p>
+        <p className="desc">{description}</p>
         <div>
           {quantity} {pluralize("item", quantity)} in stock
         </div>
-        <span>${price}</span>
+        <span className="price">${price}</span>
       </div>
       <Button onClick={addToCart}>Add to cart</Button>
     </div>

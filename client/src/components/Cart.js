@@ -9,6 +9,8 @@ import Auth from "../utils/auth";
 import { useStoreContext } from "../utils/GlobalState";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../utils/actions";
 
+import "../cart.css";
+
 // CHECK THIS KEY
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
