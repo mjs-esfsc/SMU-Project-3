@@ -12,14 +12,9 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import React from "react";
 import "antd/dist/antd.css";
-<<<<<<< HEAD
-import { Layout, Button, Row, Col } from 'antd';
-import { Helmet } from 'react-helmet';
-=======
 import { Layout, Button, Row, Col } from "antd";
 import { Helmet } from "react-helmet";
 
->>>>>>> c0db7a21eb1cbffcb2d24a96d2ed9fc2c29f1c39
 // importing BrowserRouter to make app a multi-page application
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 // import logo from "./logo.svg";
