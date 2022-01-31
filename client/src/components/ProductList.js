@@ -10,6 +10,9 @@ import { idbPromise } from "../utils/helpers";
 // import { Content } from "antd/lib/layout/layout";
 import { Layout, Button, Row, Col } from "antd";
 
+// importing css styling for productList
+import "../productList.css";
+
 const { Header, Sider, Content } = Layout;
 
 function ProductList() {
@@ -42,7 +45,7 @@ function ProductList() {
   return (
     <Content>
       <div className="my-2">
-        <h2>Products and Fleet:</h2>
+        <h2 className="title">Products and Fleet</h2>
         {state.products.length ? (
           <div className="flex-row">
             {products.map((product) => (
