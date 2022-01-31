@@ -62,6 +62,9 @@ function App() {
           <Layout>
             <StoreProvider>
               <Nav />
+              <Helmet>
+                <title>Two Men and a Camel</title>
+              </Helmet>
               <div className="horseHeader">
                 <p
                   style={{
