@@ -90,44 +90,48 @@ function App() {
                   fontSize: "30px",
                   fontFamily: "fantasy",
                   color: "tomato",
+                  marginTop: "10%",
                 }}
               >
                 What We're Made Of
               </h1>
               <Row style={{ textAlign: "center" }}>
-                <Col span={8}>
+                <Col className="sloganBlocks" span={8}>
                   <img
+                    className="appImages"
                     src="https://s19525.pcdn.co/wp-content/uploads/2019/09/community.jpg"
                     alt="Foundation"
-                    style={{ height: "300px", width: "300 px" }}
+                    // style={{ height: "300px", width: "300 px" }}
                   ></img>
                   <h1>Our Foundation</h1>
-                  <p style={{ fontSize: "20px" }}>
+                  <p style={{ fontSize: "120%" }}>
                     We pride ourselves on being able to give back to the
                     community. Thats what keeps our teams strong and morale
                     high.
                   </p>
                 </Col>
-                <Col span={8}>
+                <Col className="sloganBlocks" span={8}>
                   <img
+                    className="appImages"
                     src="https://needinc.files.wordpress.com/2018/01/how-to-be-successful-with-weight-loss_1-1024x682.jpg"
                     alt="Dedication"
-                    style={{ height: "300px", width: "300 px" }}
+                    // style={{ height: "300px", width: "300 px" }}
                   ></img>
                   <h1>Our Dedication to Service</h1>
-                  <p style={{ fontSize: "20px" }}>
+                  <p style={{ fontSize: "120%" }}>
                     We bring top notch service for a great price. Our employees
                     stop at nothing to give you the best service possible.
                   </p>
                 </Col>
-                <Col span={8}>
+                <Col className="sloganBlocks" span={8}>
                   <img
+                    className="appImages"
                     src="https://www.theridgeep.com/hp_wordpress/wp-content/uploads/2020/06/The-Recruiting-Funnel-Connect-Phase.jpg"
                     alt="Connect"
-                    style={{ height: "300px", width: "300 px" }}
+                    // style={{ height: "300px", width: "300 px" }}
                   ></img>
                   <h1>Connect With Us!</h1>
-                  <p style={{ fontSize: "20px" }}>
+                  <p style={{ fontSize: "120%" }}>
                     Find us on all social medias and see what were all about!
                   </p>
                 </Col>

@@ -6,6 +6,8 @@ import { useMutation } from "@apollo/client";
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
 
+import "../signup.css";
+
 function Signup(props) {
   const [formState, setFormState] = useState({ email: "", password: "" });
   const [addUser] = useMutation(ADD_USER);
@@ -65,7 +67,7 @@ function Signup(props) {
     <div className="container my-1">
       <Link to="/login">← Go to Login</Link>
 
-      <h2>Signup</h2>
+      <h2>Sign Up</h2>
       <form onSubmit={handleFormSubmit}>
         <div className="flex-row space-between my-2">
           <label htmlFor="firstName">First Name:</label>
@@ -130,8 +132,10 @@ function Signup(props) {
             onChange={handleChange}
           />
         </div>
-        <div className="flex-row flex-end">
-          <button type="submit">Submit</button>
+        <div>
+          <button className="signButton" type="submit">
+            Submit
+          </button>
         </div>
       </form>
     </div>

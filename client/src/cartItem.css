@@ -3,3 +3,10 @@
   width: 56px;
   margin-right: 1rem;
 }
+
+.flex-row-cart {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin-bottom: 1%;
+}
