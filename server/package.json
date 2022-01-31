@@ -7,9 +7,9 @@
     "start": "node server.js",
     "develop": "concurrently \"npm run watch\" \"cd ../client && npm start\"",
     "install": "npm i && cd ../client && npm i",
-    "seed": "npm run seed",
+    "seed": "node seeds/seed.js",
     "build": "npm run build",
-    "watch": "nodemon"
+    "watch": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
