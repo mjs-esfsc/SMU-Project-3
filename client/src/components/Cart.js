@@ -16,6 +16,7 @@ const Cart = () => {
   const [state, dispatch] = useStoreContext();
   const [getCheckout, { data }] = useLazyQuery(QUERY_CHECKOUT);
 
+// This is your call back to verify the data variable
   useEffect(() => {
     if (data) {
       stripePromise.then((res) => {
@@ -24,12 +25,13 @@ const Cart = () => {
     }
   }, [data]);
 
+  //responsible for populating the cart
   useEffect(() => {
     async function getCart() {
       const cart = await idbPromise("cart", "get");
       dispatch({ type: ADD_MULTIPLE_TO_CART, products: [...cart] });
     }
-
+//verify contents of cart
     if (!state.cart.length) {
       getCart();
     }
