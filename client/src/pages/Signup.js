@@ -62,6 +62,7 @@ function Signup(props) {
     };
   
     return (
+      <div style={{ marginRight: '400px' }}>
       <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
         <Form.Item
           name={['user', 'name']}
@@ -110,6 +111,7 @@ function Signup(props) {
           </Button>
         </Form.Item>
       </Form>
+      </div>
     );
   
 }

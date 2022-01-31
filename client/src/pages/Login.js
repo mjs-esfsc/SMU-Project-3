@@ -44,7 +44,7 @@ function Login(props) {
   
  
   return (
-    <div style={{  }}>
+    <div style={{ marginRight: '400px' }}>
     <Form
       name="basic"
       labelCol={{
