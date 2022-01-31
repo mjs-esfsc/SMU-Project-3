@@ -1,0 +1,11 @@
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 300%;
+  font-weight: 500;
+}

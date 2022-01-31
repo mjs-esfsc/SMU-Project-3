@@ -14,6 +14,8 @@ import {
 import { QUERY_PRODUCTS } from "../utils/queries";
 import { idbPromise } from "../utils/helpers";
 
+import "../Detail.css";
+
 function Detail() {
   const [state, dispatch] = useStoreContext();
   const { id } = useParams();
@@ -89,6 +91,12 @@ function Detail() {
 
           <h2>{currentProduct.name}</h2>
 
+          <img
+            className="productImage"
+            src={`/images/${currentProduct.image}`}
+            alt={currentProduct.name}
+          />
+
           <p>{currentProduct.description}</p>
 
           <p>
@@ -101,11 +109,6 @@ function Detail() {
               Remove from Cart
             </button>
           </p>
-
-          <img
-            src={`/images/${currentProduct.image}`}
-            alt={currentProduct.name}
-          />
         </div>
       ) : null}
       {loading ? <p>Loading ...</p> : null}
