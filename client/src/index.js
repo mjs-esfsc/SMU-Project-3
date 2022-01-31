@@ -7,10 +7,12 @@ import App from "./App";
 // import './index.css';
 import * as serviceWorker from "./serviceWorker";
 
+{/* <React.StrictMode>
+    
+  </React.StrictMode>, */}
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById("root")
 );
 

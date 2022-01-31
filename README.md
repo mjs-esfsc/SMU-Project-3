@@ -11,6 +11,8 @@ As a bonus we impremented service worker and web manifest (???) files.
 ## Technologies Used
 ### Full stack MERN app deployed at Heroku
 ### Stripe for credit card payment
+### JWT authentication
+### Ant design component library
 
 ## Links
 ### GitHub Page
@@ -19,8 +21,8 @@ https://github.com/mjs-esfsc/SMU-Project-3/
 to be added
 
 ## Contributors 
-### Mark Sammis - overall project management
-### Martin Bedoya - back end
+### Mark Sammis - overall project management, powerpoint
+### Martin Bedoya - back end, JWT authentication
 ### Allen Cheslik - Database and Seeds, Stripe, Serviceworker Implementations
 ### Talhah Awan - styles, ant-components
-### Alexander Umnov - front end
+### Alexander Umnov - front end, readme, powerpoint
